@@ -98,6 +98,7 @@ if ( window.parent && window.location !== window.parent.location )
 				}
 				$(window).scrollLeft($(window).scrollLeft() + vector[0]);
 				$(window).scrollTop($(window).scrollTop() + vector[1]);
+				window.scrolled = true;
 			}, 1000/60);
         }
         else $('.mobile-scrollbar').removeClass('active');
@@ -115,6 +116,7 @@ if ( window.parent && window.location !== window.parent.location )
 		};
 		$(window).scrollLeft(startScroll.x - shift.x);
 		$(window).scrollTop(startScroll.y - shift.y);
+		window.scrolled = true;
 		moved = true;
 		if (shift.x) $('.mobile-scrollbar-h').addClass('active');
 		if (shift.y) $('.mobile-scrollbar-v').addClass('active');
